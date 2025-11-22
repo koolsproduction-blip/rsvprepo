@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <title>Gipp Goodies Presents: Zagga Soul Sessions</title>
+  <style>
+    /* Outline all interactive buttons/links in red */
+    a[role="button"], button {
+      outline: 2px solid red;
+      outline-offset: 2px;
+      box-sizing: border-box;
+    }
+    /* Reusable button styles */
+    .btn-black {
+      background:#000;
+      color:#fff;
+      padding:.4rem .6rem;
+      border-radius:8px;
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      text-decoration:none;
+    }
+    .btn-purple {
+      background:#6a0dad;
+      color:#fff;
+      padding:.35rem .75rem;
+      border-radius:6px;
+      text-decoration:none;
+      display:inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="container-fluid">
+  <ul>
+    <li><strong>Gipp Goodies Presents: Zagga Soul Sessions</strong></li>
+  </ul>
+  <ul>
+    <li>
+      <a href="http://localhost:8000/index.html" role="button" target="_self" rel="noopener noreferrer"
+         class="btn-black" aria-label="Home">
+        <!-- house icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="#ffffff"/>
+        </svg>
+        <span style="font-weight:600;">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/reel/DG3mPviviQ_/?igsh=MTM0OWE0MnVoMno1OQ%3D%3D" role="button" target="_blank" rel="noopener noreferrer" class="btn-purple">Events</a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/zaggasoulsesh/?igsh=ajgzZjJrMGxnamJx&utm_source=qr" role="button" target="_blank" rel="noopener noreferrer" class="btn-black">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<main class="container">
+  <div class="grid">
+    <section>
+      <hgroup>
+        <h2>Congratulations! Youre Invited! </h2>
+        <h3>Let us know you're coming!
+        This is a private event so everyone must RSVP.
+        We appreciate your cooperation in helping to keep this a comfotable environment to unwind
+         and enjoy the vibes. </h3>
+      </hgroup>
+
+      <p>Please fill out the form below to reserve your entry. We will use your details to contact you with itenerary and event updates.</p>
+
+      <figure>
+        <img src="assets/event.png" alt="Event Gathering" />
+        <figcaption>
+          Zagga Soul Sessions Presents re-ignites the city December 29th 2025.
+        </figcaption>
+      </figure>
+
+      <h3>Why RSVP?</h3>
+      <p>RSVPing helps us plan better — seating, food, schedules, and giveaways. Thank you for taking a moment to help us enrich your experience.</p>
+
+      <h3>What We Collect</h3>
+      <p>Your email, phone number, birthday, and entry type help us personalize communication and organize the event. Thank you for providing accurate information and following all program instructions.</p>
+      <h4>Entry Types</h4>
+      <table>
+        <thead>
+          <tr><th>Code</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SRO</td><td>Standing Room Only</td></tr>
+          <tr><td>S</td><td>Solo</td></tr>
+          <tr><td>C</td><td>Couple</td></tr>
+          <tr><td>T</td><td>Table</td></tr>
+          <tr><td>V</td><td>VIP</td></tr>
+          <tr><td>M</td><td>Media</td></tr>
+        </tbody>
+      </table>
+      <p>Once your RSVP is recorded a member of our team will be in touch within 24 hours to discuss details.</p>
+    </section>
+  </div>
+</main>
+
+<section aria-label="Subscribe example">
+  <div class="container">
+    <article>
+      <hgroup>
+        <h2>RSVP HERE</h2>
+        <h3>Please Enter Your Details Below</h3>
+      </hgroup>
+
+      <form class="grid" method="post" action="/submit-rsvp">
+        <input type="text" id="firstname" name="firstname" placeholder="Full Name" aria-label="Full Name" required />
+        <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
+        <input type="text" id="phone" name="phone" placeholder="Phone Number" aria-label="Phone Number" required />
+        <input type="date" id="birthday" name="birthday" aria-label="Birthday" required />
+        <!-- Entry Type: letters only -->
+        <input type="text" id="entry_type" name="entry_type" placeholder="Entry Type (letters only)" aria-label="Entry Type" pattern="[A-Za-z]+" title="Letters only (A–Z)" required />
+        <div style="text-align:center; width:100%; margin-top:.5rem;">
+          <button type="submit" style="display:inline-block; font-size:0.85rem; padding:.35rem .6rem;">Submit RSVP</button>
+        </div>
+      </form>
+    </article>
+  </div>
+</section>
+
+<footer class="container">
+  <small>
+    <a href="#">Privacy Policy</a> • <a href="#">Contact Us</a>
+  </small>
+</footer>
+
+</body>
+</html>
