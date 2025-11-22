@@ -113,17 +113,28 @@
         <h3>Please Enter Your Details Below</h3>
       </hgroup>
 
-      <form class="grid" method="post" action="/submit-rsvp">
-        <input type="text" id="firstname" name="firstname" placeholder="Full Name" aria-label="Full Name" required />
-        <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required />
-        <input type="text" id="phone" name="phone" placeholder="Phone Number" aria-label="Phone Number" required />
-        <input type="date" id="birthday" name="birthday" aria-label="Birthday" required />
-        <!-- Entry Type: letters only -->
-        <input type="text" id="entry_type" name="entry_type" placeholder="Entry Type (letters only)" aria-label="Entry Type" pattern="[A-Za-z]+" title="Letters only (A–Z)" required />
-        <div style="text-align:center; width:100%; margin-top:.5rem;">
-          <button type="submit" style="display:inline-block; font-size:0.85rem; padding:.35rem .6rem;">Submit RSVP</button>
-        </div>
-      </form>
+     <!-- modify this form HTML and place wherever you want your form -->
+<form 
+  action="https://formspree.io/f/xovbkwyd" method="POST">
+<label>
+   Your email:
+    <input type="email" name="email">
+</label>
+  <label>
+   Your name:
+    <input type="name" name="name">
+</label>
+  <label>
+   Your phone number:
+    <input type="phone" name="phone">
+</label> 
+  <label>
+    Your RSVP Type:
+    <input type="entry" name="entry">
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
     </article>
   </div>
 </section>
